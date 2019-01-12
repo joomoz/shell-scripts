@@ -29,3 +29,16 @@ ls ~ | grep 'searched_text'
 ```
 ls ~ | grep '*.txt' | wc -l
 ```
+## Bash scripts
+### Files begin with the line '#!/bin/bash'. Give execution permission 'sudo chmod u+x 'filename.sh'.
+### Previous file count in a bash script
+```
+#!/bin/bash
+ls ~ | wc -l
+```
+### List all files and subdirectorie
+```
+#!/bin/bash
+ls -R /cs/home/tkt_cam/public_html/2011/11
+```
+
