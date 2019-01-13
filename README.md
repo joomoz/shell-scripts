@@ -60,8 +60,11 @@ ls -R /cs/home/tkt_cam/public_html/$(date +%Y/%m)/ | grep '.jpg' | wc -l
 ```
 
 ## Find
-
-
+A script that finds the image files corresponding to the current month and counts them. Using find, date, and wc -l.
+```
+#!/bin/bash
+find /cs/home/tkt_cam/public_html/$(date +%Y/%m)/ -type f | wc -l
+```
 
 
 
