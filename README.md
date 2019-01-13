@@ -98,10 +98,23 @@ Grep PROCESSOR_ZONE like you did in the last exercise and write a sed expression
 ```
 grep -r -u "PROCESSOR_ZONE" lost24/monitor/2011.12.25/*/hp-temps.txt| sed -e 's| \+|,|g' -e 's|/|,|g'
 ```
-### Ehen ls chokes, use find! But remember to use single quotes!
+### When ls chokes, use find! But remember to use single quotes!
 ```
 find ./2011.11.*/ -name '*temps.txt' | sort
 ```
+
+## Testing equality
+Be very thorough with the placement of spaces around the square brackets, since the shell interpreter might get confused otherwise
+```
+prev_value=15
+curr_value=25
+if [ $prev_value -lt $curr_value ]; then
+  echo "Is it me, or is it getting hotter?"
+else
+   echo "Somebody turn up the heat, I'm freezing..."
+fi
+```
+
 
 
 
