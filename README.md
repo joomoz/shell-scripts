@@ -115,14 +115,25 @@ else
 fi
 ```
 
+## Commandline calculator (bc)
+It can perform very difficult mathematical operations, at the price of its own quirks regarding syntax. For example, the scale variable is used to truncate result precision, but it doesn't do rounding
+```
+$ echo "scale=2; 55575.23923 / 3" | bc
+18525.07
+  
+$ echo "scale=3; 55575.23923 / 3" | bc
+18525.079
+```
+## bc example - average.sh 
+Calculates the arithmetic mean of the input parameters ($1, $2, ...) using bc.
+```
+#!/bin/bash
 
+sum=0
+for var in "$@"
+do
+  let "sum += $var"
+done
 
-
-
-
-
-
-
-
-
-
+echo "scale=2; $sum / $#" | bc
+```
