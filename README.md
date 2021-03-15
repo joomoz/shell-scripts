@@ -1,5 +1,4 @@
 # Shell commands and scripts
-Shell commands and scripts from university course
 
 ### RSYNC - copy or backup files from one NFS to another
 ```
